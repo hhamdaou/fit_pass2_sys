@@ -15,7 +15,7 @@
 int main(int argc, char **argv)
 {
 
-	std::string outdir=std::string("/data/user/zzhang1/fit_pass2_sys/output/");
+	std::string outdir=std::string("/data/user/hhamdaoui/fit_pass2_sys_output/");
 
 	if (argc<5) {
 		std::cout << "expect six arguments: jobid[1,2] and njobs[1,2] and astro_norm_seed, astro_index_seed. quitting!" << std::endl;
@@ -137,6 +137,8 @@ int main(int argc, char **argv)
 	options.insert(std::pair<std::string, NuFit::helpers::par_options>(holeicep0.name, holeicep0));
 	options.insert(std::pair<std::string, NuFit::helpers::par_options>(holeicep1.name, holeicep1));
 	options.insert(std::pair<std::string, NuFit::helpers::par_options>(selfveto.name, selfveto));
+	options.insert(std::pair<std::string, NuFit::helpers::par_options>(cross_section.name, cross_section));
+
 	options.insert(std::pair<std::string, NuFit::helpers::par_options>(hadronicinteraction.name, hadronicinteraction));
     /*
 	options.insert(std::pair<std::string, NuFit::helpers::par_options>(astro_norm.name, astro_norm));
@@ -164,6 +166,8 @@ int main(int argc, char **argv)
 	pars.insert(std::pair<std::string, double>(holeicep0.name, holeicep0.seed));
 	pars.insert(std::pair<std::string, double>(holeicep1.name, holeicep1.seed));
 	pars.insert(std::pair<std::string, double>(selfveto.name, selfveto.seed));
+	pars.insert(std::pair<std::string, double>(cross_section.name, cross_section.seed));
+
 	pars.insert(std::pair<std::string, double>(hadronicinteraction.name, hadronicinteraction.seed));
 
     /*
@@ -500,6 +504,8 @@ int main(int argc, char **argv)
     pars[holeicep1.name]=0.0146574;
     pars[scattering.name]=1.02159;
     pars[selfveto.name]=917.949;
+	pars[cross_section.name]=917.949;
+
 
     double random_seed = 1;
     NuFit::toymc sim(wrapper, random_seed);

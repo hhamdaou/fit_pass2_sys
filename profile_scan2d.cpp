@@ -13,7 +13,7 @@
 int main(int argc, char **argv)
 {
 
-	std::string outdir=std::string("/data/user/zzhang1/fit_pass2_sys/output/");
+	std::string outdir=std::string("/data/user/hhamdaoui/fit_pass2_sys_output/");
 
 	if (argc<6) {
 		std::cout << "expect six arguments: jobid[1,2] and njobs[1,2] and out_subdir. quitting!" << std::endl;

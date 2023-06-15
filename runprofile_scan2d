@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+source /data/user/zzhang1/ROOT/build_wMinuit2/bin/thisroot.sh
+/data/user/hhamdaoui/fit_pass2_sys/profile_scan2d $1 $2 $3 $4 $5

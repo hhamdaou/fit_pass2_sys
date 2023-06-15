@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#source /data/user/zzhang1/ROOT/build/bin/thisroot.sh
+source /data/user/zzhang1/ROOT/build_wMinuit2/bin/thisroot.sh
+/data/user/hhamdaoui/fit_pass2_sys/profile_scan.exe $1 $2 $3 $4
